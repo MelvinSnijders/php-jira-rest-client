@@ -501,7 +501,6 @@ class IssueService extends \JiraRestApi\JiraClient
      */
     public function transition($issueIdOrKey, $transition): ?string
     {
-        $this->log->debug('transition='.var_export($transition, true));
 
         if (!isset($transition->transition['id'])) {
             if (isset($transition->transition['untranslatedName'])) {
