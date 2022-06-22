@@ -24,7 +24,7 @@ class IssueField implements \JsonSerializable
 
     public ?DateTimeInterface $updated = null;
 
-    public string $description;
+    public $description;
 
     public ?Priority $priority = null;
 
@@ -270,7 +270,7 @@ class IssueField implements \JsonSerializable
      * @see \JiraRestApi\Issue\IssueFieldV3::addDescriptionHeading
      * @see \JiraRestApi\Issue\IssueFieldV3::addDescriptionParagraph
      */
-    public function setDescription(?string $description): static
+    public function setDescription($description): static
     {
         if (!empty($description)) {
             $this->description = $description;
